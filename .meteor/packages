@@ -24,3 +24,6 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 kadira:flow-router
 meteortoys:allthings
 ultimatejs:tracker-react
+
+accounts-ui
+accounts-password@1.2.12
