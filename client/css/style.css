@@ -2,3 +2,15 @@
 	margin-top:5px;
 	margin-bottom: 5px;
 }
+
+.card {
+	padding:10px !important;
+}
+
+.dashboard-wrapper {
+	margin-top:20px;
+}
+
+.MeepListContainer {
+	margin-top:20px;
+}

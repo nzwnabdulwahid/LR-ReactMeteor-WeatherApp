@@ -8,10 +8,11 @@ export default class RegisterPageWrapper extends React.Component {
 		event.preventDefault();		
 		let email = this.refs.email.value;
 		let password = this.refs.password.value;
+		let name = this.refs.name.value;
 		
 		console.log(email + " " + password );
 
-		Meteor.call('createNewUser', email, password,  function(err, result){
+		Meteor.call('createNewUser', email, password, name,  function(err, result){
 			if(err){
 				console.log(err);
 			}
@@ -39,6 +40,10 @@ export default class RegisterPageWrapper extends React.Component {
 				<FormGroup>
 					<Label>Password</Label>
 					<input type="password" ref="password"  className="form-control"/>
+				</FormGroup>
+				<FormGroup>
+					<Label>Full Name</Label>
+					<input type="name" ref="name"  className="form-control"/>
 				</FormGroup>
 				
 				<FormGroup>

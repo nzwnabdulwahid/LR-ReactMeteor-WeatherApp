@@ -7,6 +7,8 @@ import LoginPageWrapper from './pages/LoginPageWrapper.jsx'
 import RegisterPageWrapper from './pages/RegisterPageWrapper.jsx'
 import DashboardPageWrapper from './pages/DashboardPageWrapper.jsx'
 
+import UserBasedContainer from './pages/UserBasedContainer.jsx'
+
 
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -52,4 +54,37 @@ FlowRouter.route('/logout', {
     FlowRouter.go('/');
   }
 });
+
+// FlowRouter.route('/meep/:_id', {
+//   name: 'meepwithId',
+//   subscriptions: function(params) {
+//     this.register('meepsBasedOnId', Meteor.subscribe('meepsBasedOnId', params._id));
+//   },
+//   action(){
+		
+// 		mount(AppHeaderLayout, {
+// 		content: (<SpecificMeepsContainer meepsId={params._id} />),			
+// 		})
+		
+	
+// 	}
+// });
+
+FlowRouter.route('/user/:_id', {
+  name: 'userwithId',
+  subscriptions: function(params) {
+    this.register('userBasedOnId', Meteor.subscribe('userBasedOnId', params._id));
+
+  },
+  action(params){
+		 
+		mount(AppHeaderLayout, {
+		content: (<UserBasedContainer meepsId={params._id} />),			
+		})
+		
+	
+	}
+});
+
+
 
