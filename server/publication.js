@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 Meeps = new Mongo.Collection('meeps');
+Messages = new Mongo.Collection('messages');
 // Users = new Mongo.Collection('users');
 
 Meteor.publish('meepslists', function() {
@@ -14,12 +15,15 @@ Meteor.publish('meepsBasedOnId', function (id) {
   });
 });
 
-Meteor.publish('userBasedOnId', function (id) {    
-     return Meteor.users.find({_id: id}).fetch(); 
+Meteor.publish('users', function () {    
+     return Meteor.users.find();     
 });
 
-Meteor.publish('users', function () {    
-     return Meteor.users.find({}).fetch();     
+Meteor.publish('MessageList', function () {   
+
+     return Messages.find();
 });
+
+
 
 

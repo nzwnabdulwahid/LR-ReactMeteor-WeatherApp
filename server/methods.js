@@ -20,6 +20,17 @@ Meteor.methods({
 			createdAt: new Date(),
 			fav: 0
 		});
+	},
+
+	postNewMessage(to, message){
+		Messages.insert({
+			from: Meteor.userId(),
+			to: to,
+			message: message,
+			createdAt: new Date(),
+			status: 'unread',
+			archived: false 
+		});
 	}
 
 

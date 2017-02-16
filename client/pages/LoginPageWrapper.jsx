@@ -17,7 +17,7 @@ export default class LoginPageWrapper extends React.Component {
 				console.log("erorr");
 			}
 			else {
-				FlowRouter.go("/dashboard");
+				FlowRouter.go("/user-list");
 			}
 		});
 	}	

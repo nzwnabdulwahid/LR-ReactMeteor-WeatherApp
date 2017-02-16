@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import { Form, FormGroup, Col, Button, Input,Label, Row, ButtonGroup, Card } from 'reactstrap';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
-import MeepsCard from './MeepsCard.jsx';
+
+
 
 export default class DashboardPageWrapper extends TrackerReact(React.Component) {
 
@@ -56,6 +57,8 @@ export default class DashboardPageWrapper extends TrackerReact(React.Component) 
 		else if (this.meepList().length == 1) {
 			return <div><MeepsCard key={this.meepList()._id} Meep={this.meepList()} /></div>
 		}
+
+
 	}
 
 	render(){
@@ -83,6 +86,10 @@ export default class DashboardPageWrapper extends TrackerReact(React.Component) 
 					<Col md={{ size: 9, offset: 3 }}>
 						
 							{this.renderUserMeeps()}
+						
+					</Col>
+
+					<Col>
 						
 					</Col>
 				</Row>

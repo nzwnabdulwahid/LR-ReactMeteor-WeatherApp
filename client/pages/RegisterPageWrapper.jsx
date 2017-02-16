@@ -22,7 +22,7 @@ export default class RegisterPageWrapper extends React.Component {
 						console.log("Error Logging In");
 					}
 					else {
-						FlowRouter.go("/dashboard");
+						FlowRouter.go("/user-list");
 					}
 				});
 			}
